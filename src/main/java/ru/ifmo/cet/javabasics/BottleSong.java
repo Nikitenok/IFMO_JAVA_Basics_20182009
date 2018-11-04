@@ -35,9 +35,9 @@ import java.util.Map;
  */
 public class BottleSong  {
 
-    Map<Integer, String> hashMap = new HashMap<Integer, String>();
-    int bottles = 99;
-    String song = "";
+    private Map<Integer, String> hashMap = new HashMap<Integer, String>();
+    private int bottles = 99;
+    private String song = "";
 
     public BottleSong(int bottleTakenAtOnce) {
 
@@ -45,9 +45,9 @@ public class BottleSong  {
             throw new IllegalArgumentException("wrong number of bottles");
         }
 
-        FullMap();
+        fullMap();
 
-        WriteSong(bottleTakenAtOnce, getTakenBottles(bottleTakenAtOnce));
+        writeSong(bottleTakenAtOnce, getTakenBottles(bottleTakenAtOnce));
 
     }
 
@@ -62,7 +62,7 @@ public class BottleSong  {
 
     }
 
-    private void WriteSong(int taken, String taken_word){
+    private void writeSong(int taken, String taken_word){
 
 
         while (bottles > 0){
@@ -88,7 +88,7 @@ public class BottleSong  {
 
     }
 
-    private void FullMap(){
+    private void fullMap(){
         hashMap.put(0,"");
         hashMap.put(1,"one");
         hashMap.put(2,"two");
