@@ -48,39 +48,22 @@ public class WarAndPeaceExercise {
 
         List<Map.Entry<String,Integer>> sort = new ArrayList<>(words.entrySet());
 
-
-
         Collections.sort(sort, new Comparator<Map.Entry<String,Integer>>() {
-
             @Override
-
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-
                 if(o1.getValue().equals(o2.getValue()))
-
                     return o1.getKey().compareTo(o2.getKey());
-
                 else
-
                     return o2.getValue().compareTo(o1.getValue());
-
             }
-
         });
-
-
+        
         for(Map.Entry entry: sort){
-
             String key = (String) entry.getKey();
-
             Integer value = (Integer) entry.getValue();
-
             if (value >= 10) {
-
                 s += key + " - " + value + "\n";
-
             }
-
         }
 
         return s.trim();
