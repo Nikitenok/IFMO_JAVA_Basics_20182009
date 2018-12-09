@@ -10,6 +10,9 @@ public class WAPResult {
     public final String result;
 
     public WAPResult() throws IOException {
+
         result = readAllLines(Paths.get("src", "main","resources", "WAPResult.txt")).stream().collect(Collectors.joining("\n"));
+
+
     }
 }
